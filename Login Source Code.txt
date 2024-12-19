@@ -1,0 +1,23 @@
+
+
+
+     if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+{
+    MessageBox.Show("Please enter all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+    return;
+}
+
+// Hardcoded credentials
+string correctUsername = "admin";
+string correctPassword = "password123"; // Use a secure password in a real application
+
+// Check credentials
+if (textBox1.Text == correctUsername && textBox2.Text == correctPassword)
+{
+    Main mn = new Main();
+    mn.Show();
+}
+else
+{
+    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+}
